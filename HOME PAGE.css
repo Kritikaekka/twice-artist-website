@@ -533,33 +533,40 @@ display: inline-block;
     margin-top: 6px !important;
   }
   
-  .third-section, 
-  .image-row,
+ .third-section {
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  .image-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+  }
   .card {
-    width: 96vw !important;
-    max-width: 350px !important;
-    margin: 0 auto 10px auto !important;
+    width: 95vw !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
     display: block !important;
     position: relative !important;
-    box-sizing: border-box !important;
-    overflow: visible !important;
   }
- .card img.base, 
-  .card img.overlay2 {
+  .card img.base, .card img.overlay2 {
     width: 100% !important;
-    height: auto !important;
-    display: block !important;
     max-width: 340px !important;
-    margin: 0 auto !important;
+    height: auto !important;
     border-radius: 10px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
-  /* Third section and vote form scale down & center */
-  .third-section {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    min-height: 50vh !important;
-    margin-top: 0 !important;
-  }
+}
   h4, .favorite {
     font-size: 4rem !important;
     text-align: center !important;
