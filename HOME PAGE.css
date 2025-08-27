@@ -454,3 +454,152 @@ font-size: 0.95rem;
 font-weight: bold;
 display: inline-block;
 }
+
+
+
+
+@media (max-width: 600px) {
+
+  #navbar {
+    flex-direction: column;
+  }
+
+
+.nav-left a {
+    font-size: 4rem !important;
+    padding: 3px 6px !important;
+    
+  }
+  .nav-right {
+    margin-top: 4px;
+    float: right !important;
+  }
+  .nav-right a {
+    font-size: 1.1rem !important;
+    padding: 3px !important;
+    text-align: right !important;
+    
+  }
+
+  .heading {
+    font-size: 1.4rem !important;
+    margin-top: 20px !important;
+  }
+  marquee h1.title, .heading h1 {
+    font-size: 4rem  !important;
+    word-break: break-word;
+  }
+  .content {
+    padding: 0 10px !important;
+    width: 100vw !important;
+    margin-top: 0 !important;
+  }
+  /* Menu links stack vertically */
+  .menu {
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin-top: 10px !important;
+  }
+  .menu a {
+    font-size: 1.8rem !important;
+    padding: 6px !important;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  /* Tour layout stacks vertically, increases padding */
+  .second-section {
+    padding: 50px 5px 0px 5px !important;
+    min-height: 120vh;
+  }
+  .tour-container {
+    width: 90vw !important;
+    padding: 0 3vw;
+  }
+  .tour-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 14px 8px !important;
+    font-size: 1rem !important;
+  }
+  .tour-info .date, .tour-info .venue, .city {
+    font-size: 1rem !important;
+    margin: 2px 0 !important;
+  }
+  .ticket-btn {
+    width: 98%;
+    font-size: 1rem !important;
+    margin-top: 6px !important;
+  }
+  /* Card images stack and shrink */
+  .image-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+  .card {
+    width: 100vw !important;
+    max-width: 290px !important;
+    height: auto !important;
+    margin-bottom: 100px;
+    overflow: visible;
+  }
+  .card img.base, .card img.overlay2 {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 10px !important;
+  }
+  /* Third section and vote form scale down & center */
+  .third-section {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    min-height: 50vh !important;
+    margin-top: 0 !important;
+  }
+  h4, .favorite {
+    font-size: 4rem !important;
+    text-align: center !important;
+    margin: 10px 0 !important;
+  }
+  #voteForm {
+    padding: 13px 6px !important;
+    border-radius: 20px !important;
+    font-size: 1rem !important;
+    margin: 0 auto 20px auto !important;
+    width: 100vw !important;
+    max-width: 350px !important;
+  }
+  #voteForm p {
+    font-size: 1.3rem !important;
+  }
+  #voteForm label {
+    font-size: 0.9rem !important;
+    width: 50% !important;
+  }
+  #voteForm input[type="submit"] {
+    width: 95% !important;
+    font-size: 1rem !important;
+    margin-top: 8px !important;
+  }
+  /* Popup and footer scale down */
+  .popup-content {
+    width: 90vw !important;
+    padding: 13px !important;
+    font-size: 1rem !important;
+  }
+  #closePopup {
+    font-size: 2.6rem !important;
+  }
+  .footer {
+    font-size: 0.77rem !important;
+    padding: 10px 0 !important;
+    letter-spacing: 0.2rem !important;
+  }
+  .footer-links {
+    flex-direction: column !important;
+    font-size: 1rem !important;
+  }
+}

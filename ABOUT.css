@@ -235,3 +235,98 @@ font-size: 0.95rem;
 font-weight: bold;
 display: inline-block;
 }
+
+/* MOBILE STYLES: add at the end of your CSS */
+@media (max-width:600px) {
+  html, body {
+    width: 100vw !important;
+    overflow-x: hidden !important;
+    font-size: 1.1rem !important;
+    background-color: #f1deaf !important;
+  }
+  #navbar {
+    flex-direction: column;
+    
+  }
+  .nav-left a
+  {
+    font-size: 3rem !important;
+  } 
+  
+
+  .nav-right {
+    margin-right: 0 !important;
+    margin-top: 2px;
+  }
+  .nav-right a {
+    font-size: 1.2rem !important;
+    padding: 4px !important;
+  }
+  h4 {
+    font-size: 4rem !important;
+    margin-top: 100px !important;
+  }
+  .slider-container {
+    width: 100vw !important;
+    height: 20vh !important;
+    gap: 10px !important;
+    margin: 30px auto 0 auto !important;
+    min-width: 0;
+    padding: 0 2vw;
+   
+  }
+  .slide-wrapper {
+    width: 120px !important;
+    gap: 0 !important;
+    
+  }
+  .slide {
+    width: 115px !important;
+    height: 235px !important;
+    border-radius: 9px !important;
+    font-size: 1rem !important;
+    box-shadow: 0 8px 15px rgba(76,71,71,0.16) !important;
+    margin: 0 auto !important;
+  }
+  .slide-label {
+    font-size: 0.7rem !important;
+    max-width: 115px !important;
+    padding: 0 2px;
+  }
+  .nav-arrow {
+    font-size: 3.2rem !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    top: 46% !important;
+  }
+  .nav-arrow.left { left: 5px !important; }
+  .nav-arrow.right { right: 20px !important; }
+  .grid-container {
+    padding: 0 !important;
+    width: 100vw !important;
+    gap: 10px 0 !important;
+  }
+  .card {
+    font-size: 0.98rem !important;
+    padding: 9px 8px !important;
+    margin: 100px 0 0 0 !important;
+    width: 96vw !important;
+    box-sizing: border-box !important;
+    border-radius: 12px !important;
+    line-height: 1.45 !important;
+  }
+  .footer {
+    margin-top: 50px;
+    padding: 10px 0 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.35rem !important;
+  }
+  .footer-links {
+    flex-direction: column !important;
+    font-size: 1rem !important;
+    gap: 3px !important;
+  }
+  .footer-links a { font-size: 1rem !important; }
+  .footer-disclaimer { font-size: 0.93rem !important; }
+}
