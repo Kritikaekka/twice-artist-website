@@ -539,6 +539,7 @@ display: inline-block;
     overflow-x: hidden !important;
     padding: 0 !important;
     margin: 0 auto !important;
+    height: max-content;
     
   }
   .image-row {
@@ -553,7 +554,7 @@ display: inline-block;
     overflow-x: hidden !important;
     display: flex !important;
     overflow-y: hidden;
-    max-height: fit-content !;
+    
     
   }
   .card {
