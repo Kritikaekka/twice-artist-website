@@ -533,13 +533,13 @@ display: inline-block;
     margin-top: 6px !important;
   }
   
-@media (max-width: 600px) {
   .third-section {
     width: 100vw !important;
     display: block !important;
     overflow-x: hidden !important;
     padding: 0 !important;
     margin: 0 auto !important;
+    
   }
   .image-row {
     width: 100vw !important;
@@ -552,11 +552,12 @@ display: inline-block;
     padding: 0 !important;
     overflow-x: hidden !important;
     display: flex !important;
+    height: 1200px;
   }
   .card {
     width: 96vw !important;
     max-width: 360px !important;
-    margin: 30 auto !important;
+    margin: 50 auto !important;
     display: block !important;
     position: relative !important;
     overflow: visible !important;
@@ -640,4 +641,4 @@ display: inline-block;
     flex-direction: column !important;
     font-size: 1rem !important;
   }
-}
+
