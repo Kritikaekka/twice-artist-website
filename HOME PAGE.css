@@ -556,7 +556,7 @@ display: inline-block;
   .card {
     width: 96vw !important;
     max-width: 360px !important;
-    margin: 0 auto !important;
+    margin: 30 auto !important;
     display: block !important;
     position: relative !important;
     overflow: visible !important;
