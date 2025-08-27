@@ -1,0 +1,146 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TWICE</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ABOUT.css">
+</head>
+
+<body>
+
+<div id="navbar">
+<div class="nav-left">
+<a href="https://x.com/jypetwice">TWICE</a>
+  
+</div>
+<div class="nav-right">
+  <a href="https://x.com/jypetwice"><i class="fab fa-twitter"></i></a>
+  <a href="https://www.instagram.com/twicetagram/?hl=en"><i class="fab fa-instagram"></i></a>
+  <a href="https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"><i class="fab fa-spotify"></i></a>
+  <a href="https://www.youtube.com/channel/UCzgxx_DM2Dcb9Y1spb9mUJA"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<h4>ABOUT</h4>
+
+<div class="slider-container" id="slider">
+  <span class="nav-arrow left" id="prev">&#8249;</span>
+  <!-- Slides injected by JS -->
+  <span class="nav-arrow right" id="next">&#8250;</span>
+</div>
+
+
+<div class="grid-container">
+      
+    <div class="card">
+      <span class="cut-corner">
+        <svg viewBox="0 0 28 28"><polyline points="0,28 28,28 28,0" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      In December 2013, JYP Entertainment announced that they would debut a new six-member girl group in the first half of 2014.[1] It would be the company's first female group since the debut of miss A in 2010. In 2014, JYP trainees Cecilia and Lena were confirmed to be in the new group, tentatively called 6mix. Nayeon, Jeongyeon, Jihyo (or Jisoo), and Minyoung were also rumored to be in the group. By early 2015, Cecilia and Lena had left the company and the former was replaced by Sana, thus ultimately canceling their debut.[2]
+
+<br><br>In 2015, Park Jin Young announced that the new JYP girl group would be formed by the survival reality show SIXTEEN, where sixteen JYP trainees would compete to debut in the seven-member girl group TWICE. The show started on May 5 and ended with Nayeon, Jeongyeon, Dahyun, Sana, Jihyo, Mina, and Chaeyoung. During the finale, Park announced that he intended to add two more members into the group, making it a nine-member girl group. By audience vote, Tzuyu was added, and by Park's choice, Momo was added, thus starting the beginning of TWICE.
+    </div>
+  </div>
+
+  <footer class="footer">
+<div class="footer-links">
+  <span class="footer-disclaimer">&copy; 2025 JYP ENTERTAINMENT</span>
+  <span class="separator">|</span>
+  <a href="#">PRIVACY POLICY</a>
+  <span class="separator">|</span>
+  <a href="#">TERMS OF USE</a>
+  <span class="separator">|</span>
+  <a href="#">COOKIES POLICY</a>
+  <span class="separator">|</span>
+  <a href="#">COOKIES SETTINGS</a>
+</div>
+</footer>
+
+
+<script>
+  const slider = document.getElementById('slider');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  // Your 9 images and labels here
+  const slidesData = [
+    { src: "image1.jpeg", label: "IM NAYEON" },
+    { src: "image2.jpeg", label: "YOO JEONGYEON" },
+    { src: "image3.jpeg", label: "HIRAI MOMO" },
+    { src: "image4.jpeg", label: "MINATOSAKI SANA" },
+    { src: "image5.jpeg", label: "PARK JIHYO" },
+    { src: "image6.jpeg", label: "MYOI MINA" },
+    { src: "image7.jpeg", label: "SON CHAEYOUNG" },
+    { src: "image8.jpeg", label: "KIM DAHYUN" },
+    { src: "image9.jpeg", label: "CHOU TZUYU" }
+  ];
+
+  let centerIndex = 0;
+
+  function createSlide(slide, className) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'slide-wrapper';
+
+    const img = document.createElement('img');
+    img.src = slide.src;
+    img.alt = slide.label;
+    img.className = `slide ${className}`;
+
+    const label = document.createElement('div');
+    label.className = 'slide-label';
+    label.textContent = slide.label;
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(label);
+
+    return wrapper;
+  }
+
+  function renderSlider() {
+    // Remove existing slides except arrows
+    const oldSlides = slider.querySelectorAll('.slide-wrapper');
+    oldSlides.forEach(s => slider.removeChild(s));
+
+    // Calculate left and right indices with wrap-around
+    const leftIndex = (centerIndex - 1 + slidesData.length) % slidesData.length;
+    const rightIndex = (centerIndex + 1) % slidesData.length;
+
+    // Insert left blurred slide
+    const leftSlide = createSlide(slidesData[leftIndex], 'blur');
+    slider.insertBefore(leftSlide, nextBtn);
+
+    // Insert center active slide
+    const centerSlide = createSlide(slidesData[centerIndex], 'active');
+    slider.insertBefore(centerSlide, nextBtn);
+
+    // Insert right blurred slide
+    const rightSlide = createSlide(slidesData[rightIndex], 'blur');
+    slider.insertBefore(rightSlide, nextBtn);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    centerIndex = (centerIndex - 1 + slidesData.length) % slidesData.length;
+    renderSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    centerIndex = (centerIndex + 1) % slidesData.length;
+    renderSlider();
+  });
+
+  // Initial render
+  renderSlider();
+</script>
+
+</body>
+</html>
+
