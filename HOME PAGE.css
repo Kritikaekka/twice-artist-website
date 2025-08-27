@@ -532,24 +532,25 @@ display: inline-block;
     font-size: 1rem !important;
     margin-top: 6px !important;
   }
-  /* Card images stack and shrink */
-  .image-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 15px !important;
-    width: 100vw !important;
-    padding: 0 !important;
-  }
+  
+  .third-section, 
+  .image-row,
   .card {
-    width: 90vw !important;
-    height:auto !important;
-    margin-bottom: 100px;
-    overflow: visible;
-    align-items: center;
+    width: 96vw !important;
+    max-width: 350px !important;
+    margin: 0 auto 10px auto !important;
+    display: block !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
   }
-  .card img.base, .card img.overlay2 {
-    width: 50px !important;
-    height: 50px !important;
+ .card img.base, 
+  .card img.overlay2 {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
     border-radius: 10px !important;
   }
   /* Third section and vote form scale down & center */
