@@ -549,7 +549,7 @@ display: inline-block;
   }
   .card img.base, .card img.overlay2 {
     width: 100% !important;
-    height: 100% !important;
+    height: 50% !important;
     border-radius: 10px !important;
   }
   /* Third section and vote form scale down & center */
