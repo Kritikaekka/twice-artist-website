@@ -553,6 +553,7 @@ display: inline-block;
     overflow-x: hidden !important;
     display: flex !important;
     overflow-y: hidden;
+    height: fit-content !;
     
   }
   .card {
